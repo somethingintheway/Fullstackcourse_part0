@@ -1,0 +1,10 @@
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server->browser: Status code 201 (success) {"message":"note created"}
+
+note over browser:
+when the save button is clicked, the browser send a POST request to
+the server with the content of the note in JSON data format. The page
+will not be reload (due to preventDefault in spa.js) 
+and the new note will be added by JS code in the 
+spa.js ("notes.push(note)").
+end note
